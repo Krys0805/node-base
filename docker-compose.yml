@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  server:
+    image: node:10
+    container_name: krys-node-base
+    working_dir: /var/www
+    command: bash -c "yarn install && yarn run dev"
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./:/var/www
+    networks:
+      - devnetwork
+
+networks:
+  devnetwork:
+    external: true

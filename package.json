@@ -1,0 +1,26 @@
+{
+  "name": "node-base",
+  "version": "1.0.0",
+  "description": "node base application",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tap test/**/*.test.js",
+    "start": "node app.js",
+    "start:debug": "node app.js --debug 0.0.0.0:9229",
+    "dev": "DEBUG=express:* node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.9.27",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "tap": "^14.0.0"
+  }
+}
