@@ -2,7 +2,7 @@ version: '3'
 
 services:
   server:
-    image: node:10
+    image: node:14.11
     container_name: krys-node-base
     working_dir: /var/www
     command: bash -c "yarn install && yarn run dev"
